@@ -4,6 +4,11 @@ import Positive from './Positive';
 import Negetive from './Negetive';
 
 function App() {
+
+  // const [sentment, setSentiment] = React.useState('');
+  
+
+
   return (
     <div>
 
@@ -42,13 +47,13 @@ function App() {
   <section id="hero" className="d-flex flex-column justify-content-center align-items-center">
     <div className="hero-container" data-aos="fade-in">
       
-    <Form />
+    <Form/>
 
     </div>
 
 
   </section>
-  {/* <Positive /> */}
+  <Positive />
   {/* <Negetive /> */}
 
   <footer id="footer">
