@@ -4,7 +4,7 @@ import axios from "axios";
 export const textData = async (val ) => {
     axios({
         method: 'post',
-        url: 'http://localhost:3024/donorReg',
+        url: 'http://1906078.pythonanywhere.com/predict',
         data: {
         //   ...val,
         val

@@ -1,11 +1,16 @@
 import React from 'react';
 import './Form.css';
 import { textData } from './services';
+import { useEffect } from 'react';
 
-function Form(){
+function Form(props){
 
     const [text, setText] = React.useState('');
     const [result, setResult] = React.useState('');
+
+    useEffect(()=>{
+        props.setSentiment(result);
+      },[result]);
 
     function text_ChangeHandeler(e) {
         setText(e.target.value);

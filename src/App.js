@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.css';
 import Form from './Form';
 import Positive from './Positive';
@@ -5,9 +6,7 @@ import Negetive from './Negetive';
 
 function App() {
 
-  // const [sentment, setSentiment] = React.useState('');
-  
-
+  const [sentiment, setSentiment] = React.useState('');
 
   return (
     <div>
@@ -47,14 +46,14 @@ function App() {
   <section id="hero" className="d-flex flex-column justify-content-center align-items-center">
     <div className="hero-container" data-aos="fade-in">
       
-    <Form/>
+    <Form sentiment={sentiment} setSentiment={setSentiment}/>
 
     </div>
 
 
   </section>
-  <Positive />
-  {/* <Negetive /> */}
+
+   {sentiment=="true"? <Positive />: sentiment=="false"? <Negetive />:<br />}
 
   <footer id="footer">
     <div className="container">
