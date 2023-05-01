@@ -3,10 +3,17 @@ import './App.css';
 import Form from './Form';
 import Positive from './Positive';
 import Negetive from './Negetive';
+// import { useEffect } from 'react';
 
 function App() {
 
   const [sentiment, setSentiment] = React.useState('');
+
+  // useEffect(()=>{
+  //   setTimeout(()=>{
+  //     setSentiment('');
+  //   }, 2000);
+  // },[sentiment]);
 
   return (
     <div>
@@ -53,7 +60,7 @@ function App() {
 
   </section>
 
-   {sentiment=="true"? <Positive />: sentiment=="false"? <Negetive />:<br />}
+   {sentiment=="true"? <Positive />: sentiment=="false"? <Negetive />:<hr style={{display: 'none'}}/>}
 
   <footer id="footer">
     <div className="container">

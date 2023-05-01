@@ -8,6 +8,11 @@
 
 console.log("connected to js");
 
+// setTimeout(() => {
+//   const elem = document.getElementById("result");
+//   elem.parentNode.removeChild(elem);
+// }, 2000);
+
 (function() {
   "use strict";
 
